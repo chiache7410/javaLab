@@ -5,10 +5,10 @@ public class test16_poker {
         int[] poker = new int[52];
         for(int i=0;i<poker.length;i++) {
             int temp = (int)(Math.random()*poker.length);
-            //
+            //檢查機制可應dowhlie
             boolean isRepeat = false;
             for(int j=0;j<i;j++){
-                if(poker[j] == temp){檢查機制可應dowhlie
+                if(poker[j] == temp){
                     isRepeat = true;
                     break;
                 }
