@@ -3,7 +3,7 @@ package tw.org.iii.javatest;
 import javax.swing.*;
 import java.util.Scanner;
 
-public class test04 {
+public class test04_if {
     public static void main(String[] args){
         /*int intScore = (int)(Math.random() * 101);*/
         /*Scanner scanner = new Scanner(System.in);
