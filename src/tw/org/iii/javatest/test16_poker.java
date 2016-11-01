@@ -1,5 +1,5 @@
 package tw.org.iii.javatest;
-
+import java.util.Arrays;
 public class test16_poker {
     public static void main(String[] args){
         //洗牌
@@ -32,8 +32,9 @@ public class test16_poker {
         for(int[] player:players){
             String[] suits = {"黑桃","紅心","方塊","梅花"};
             String[] values = {"A","2","3","4","5","6","7","8","9","10","J","Q","K"};
+            Arrays.sort(player);    //排序
             for(int card:player){
-                System.out.print(suits[card/13] + values[card%13] + "\t");
+                System.out.print(suits[card/13] + values[card%13] + "\t");      //除13>>花色,%13>>牌值
             }
             System.out.println();
         }
