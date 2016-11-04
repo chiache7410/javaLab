@@ -5,9 +5,9 @@ import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
-public class test20 extends JFrame{
+public class test20_window extends JFrame{
     private JButton open, save, exit;
-    public test20(){
+    public test20_window(){
         super("視窗titie");
         setSize(640,480);
         setLayout(new FlowLayout());
@@ -24,6 +24,6 @@ public class test20 extends JFrame{
         setVisible(true);
     }
     public static void main(String[] args) {
-        test20 t1 = new test20();
+        test20_window t1 = new test20_window();
     }
 }
