@@ -23,7 +23,9 @@ public class test36 {
     }
 }
 class student implements Serializable{
-    int ch, math, eng;
+    int ch;
+    transient int math;
+    int eng;
     String name;
     student(String name, int ch, int math, int eng){
         this.name = name;
