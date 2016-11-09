@@ -1,13 +1,13 @@
 package tw.org.iii.javatest;
 
-import java.io.BufferedReader;
+import java.io.FileOutputStream;
 import java.io.IOException;
-import java.io.InputStreamReader;
+import java.io.InputStream;
 import java.net.ServerSocket;
 import java.net.Socket;
 
 //Server
-public class test43 {
+public class test43f {
     public static void main(String[] agrs){
         try {
             ServerSocket server = new ServerSocket(9999);
@@ -16,14 +16,15 @@ public class test43 {
 
             String urip = socket.getInetAddress().getHostAddress();
             System.out.print(urip + ":");
-
-
-            BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
-            String line;
-            while ( (line = br.readLine()) != null ){
-                System.out.println(line);
+            FileOutputStream fout = new FileOutputStream("dir2/" + urip + ".jpg");
+            InputStream in = socket.getInputStream();
+            int b;
+            while ( (b = in.read()) != -1 ){
+                fout.write(b);
             }
-            br.close();
+            in.close();
+            fout.flush();
+            fout.close();
 
             server.close();
             System.out.println("Server OK");
